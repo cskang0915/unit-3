@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 
-class Character extends Component {
+class Character extends Component{
 	render(){
 		return(
-			<h1>this is the character container</h1>
+			<div>
+				<p>test</p>
+			</div>
 		)
 	}
 }
