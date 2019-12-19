@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
-import Character from '../component/Character'
+import {Link} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
+import CharacterList from '../component/CharacterList'
 
 class Characters extends Component {
 	state = {
@@ -22,13 +24,30 @@ class Characters extends Component {
 	}
 
 	render(){
-		let characters = this.state.data.map((character)=>{
-			return <Character name={character.character_name} class={character.class_name} />
+		let characterLink = this.state.data.map((character)=>{
+			let url = '/character/' + character.rowid
+			console.log(url)
+			return <Link to={url}>{character.character_name}</Link>
+			// return <CharacterList name={character.character_name} class={character.class_name} />
 		})
+
+		let characterInfo = this.state.data.map((character)=>{
+			return <Route path="/character/:id" render={(props)=>{
+				return <CharacterList name={character.character_name} class={character.class_name} id={props.match.params.id} />
+			}} />
+		})
+
 		return(
 			<div>
 				<h1>this is the character container</h1>
-				{characters}
+					<nav className="character-all-nav-bar">
+						<Link to='/character/new'>New Character</Link>
+						{characterLink}
+					</nav>
+				<Switch>
+					{characterInfo}
+					<Route path='/character/new' />
+				</Switch>
 			</div>
 		)
 	}
