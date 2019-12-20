@@ -43,7 +43,7 @@ class CharacterList extends Component{
 			<div>
 				{this.state.data.length ? <CharacterInfoOne name={this.state.data[0].character_name} class={this.state.data[0].class_name}/> : 'loading..'}
 				<nav className="character-one-nav-bar">
-					<Link to={updateURL}>Update</Link>
+					<Link to={updateURL}><button>Update</button></Link>
 					<Link to={deleteURL}>Delete</Link>
 					<Link to="/character">Back</Link>
 				</nav>

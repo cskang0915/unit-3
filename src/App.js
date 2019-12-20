@@ -20,10 +20,11 @@ class App extends Component {
 					<Route path='/weapon' component={Weapon}/>
 					<Route exact path='/character/new' component={CharacterForm}/>
 					<Route exact path='/character/:id' render={(props) => {
-						return (
-								<CharacterList id={props.match.params.id} />
-						)
+						return <CharacterList id={props.match.params.id} />
 					}} />
+					<Route exact path='/character/:id/update' render={(props) => {
+						return <CharacterForm id={props.match.params.id} />
+					}}/>
 					<Route exact path="/character/:id/delete" render={(props)=>{
 						return <CharacterDelete id={props.match.params.id} />
 					}} />
