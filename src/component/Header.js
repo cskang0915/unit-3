@@ -7,10 +7,10 @@ class Header extends Component {
 			<div>
 				<h1>Project Three</h1>
 				<nav className="header-nav-bar">
-					<li><Link to='/'>Home</Link></li>
-					<li><Link to='/character'>Character</Link></li>
-					<li><Link to='/class'>Class</Link></li>
-					<li><Link to='/weapon'>Weapon</Link></li>
+					<div className="header-link"><Link to='/'>Home</Link></div>
+					<div className="header-link"><Link to='/character'>Character</Link></div>
+					<div className="header-link"><Link to='/class'>Class</Link></div>
+					<div className="header-link"><Link to='/weapon'>Weapon</Link></div>
 				</nav>
 			</div>
 		)
