@@ -125,9 +125,9 @@ class CharacterForm extends Component{
 		}else{
 			buttonText = 'Create New Character'
 		}
-		if(this.state.redirect === true){
-			redirect= <Redirect to='/character'/>
-		}
+		// if(this.state.redirect === true){
+		// 	redirect= <Redirect to='/character'/>
+		// }
 		return(
 			<form onSubmit={this.handleSubmit}>
 				<input type="text" name="character_name" onChange={this.handleChange} value={this.state.character_name}/>

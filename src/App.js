@@ -29,6 +29,8 @@ class App extends Component {
 						return <CharacterDelete id={props.match.params.id} />
 					}} />
 				</Switch>
+
+				<p></p>
 			</div>
 
 		)

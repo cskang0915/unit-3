@@ -32,7 +32,7 @@ class Characters extends Component {
 			// 			characterData: data
 			// 		}))
 			// }
-			return <li><Link to={url}>{character.character_name}</Link></li>
+			return <li className = "character-list-one"><Link to={url}>{character.character_name}</Link></li>
 			// return <CharacterList name={character.character_name} class={character.class_name} />
 		})
 
@@ -41,7 +41,7 @@ class Characters extends Component {
 				<h1>this is the character container</h1>
 				<nav className="character-all-nav-bar">
 					<Link to='/character/new'>New Character</Link>
-					<ul>{characterLink}</ul>
+					<ul className="character-list-all">{characterLink}</ul>
 				</nav>
 			</div>
 		)
