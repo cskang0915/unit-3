@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Header from './component/Header'
+import Home from './container/Home'
 import Characters from './container/Characters'
 import CharacterList from './component/CharacterList'
 import CharacterForm from './component/CharacterForm'
@@ -15,6 +16,7 @@ class App extends Component {
 			<div>
 				<Header />
 				<Switch>
+					<Route exact path='/' component={Home}/>
 					<Route exact path='/character' component={Characters}/>
 					<Route path='/class' component={Class}/>
 					<Route path='/weapon' component={Weapon}/>
@@ -29,8 +31,6 @@ class App extends Component {
 						return <CharacterDelete id={props.match.params.id} />
 					}} />
 				</Switch>
-
-				<p></p>
 			</div>
 
 		)

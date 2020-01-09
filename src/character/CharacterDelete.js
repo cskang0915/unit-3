@@ -29,10 +29,10 @@ class CharacterDelete extends Component {
 	render(){
 		return(
 			<div>
-				<div>
+				<div className="delete-div">
 					{this.state.response.length ? this.state.response : 'Deleting'}
 				</div>
-				<Link to="/character">Back to Character</Link>
+				<Link to="/character"><button>Back to Character</button></Link>
 			</div>
 		)
 	}

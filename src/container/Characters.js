@@ -40,7 +40,7 @@ class Characters extends Component {
 			<div className="class-container">
 				<h1>this is the character container</h1>
 				<nav className="character-all-nav-bar">
-					<Link to='/character/new'>New Character</Link>
+					<Link to='/character/new'><button>New Character</button></Link>
 					<ul className="character-list-all">{characterLink}</ul>
 				</nav>
 			</div>

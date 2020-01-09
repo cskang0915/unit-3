@@ -135,7 +135,9 @@ class CharacterForm extends Component{
 					{options}
 				</select>
 				<input type="submit" value={buttonText}/>
-				{redirect}
+				<br />
+				<br />
+				<Link to="/character"><button>Back to Character</button></Link>
 			</form>
 		)
 	}
